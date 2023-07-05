@@ -1,0 +1,76 @@
+/* * {
+  color: red;
+} */
+
+/* span {
+  background-color: red;
+} */
+
+.orange {
+  color: orange;
+}
+
+#orange {
+  color: blue;
+}
+
+span.orange {
+  color: red;
+}
+
+ul > .orange {
+  background-color: gray;
+}
+
+ul .orange {
+  font-weight: bold;
+}
+
+.orange + li {
+  font-size: 30px;
+}
+
+a:hover {
+  color: red;
+}
+
+a:active {
+  background-color: black;
+  color: white;
+}
+
+input:focus {
+  background-color: lightgray;
+}
+
+.fruits span:nth-child(1) {
+  color: red;
+}
+
+.fruits div:first-child {
+  color: blue;
+}
+
+.fruits h3:last-child {
+  text-decoration: overline;
+}
+
+.fruist p:last-child {
+  color: green;
+}
+
+.fruits *:not(span) {
+  background-color: blue;
+}
+
+.fruits::before {
+  content: "과일 목록 시작";
+}
+
+input[disabled] {
+  background-color: black;
+}
+
+input[type="password"] {
+  color: red;
+}
