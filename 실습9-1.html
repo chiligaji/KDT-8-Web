@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let arr = [];
+      let sum1 = 0;
+      let sum2 = 0;
+      let sum3 = 0;
+      let sum4 = 0;
+      for (let i = 0; i < 100; i++) {
+        arr.push(i + 1);
+      }
+      console.log(arr);
+
+      // for문 사용
+      for (let a = 0; a < 100; a++) {
+        sum1 += arr[a];
+      }
+      console.log("for 문: ", sum1);
+
+      //for of 문 사용
+      for (let num of arr) {
+        sum2 += num;
+      }
+      console.log("for of 문: ", sum2);
+
+      //forEach 문 사용
+      arr.forEach(function (num1) {
+        sum3 += num1;
+      });
+      console.log("forEach문: ", sum3);
+
+      //forEach 화살표 함수 사용
+      arr.forEach((num2) => {
+        sum4 += num2;
+      });
+      console.log("forEach 화살표 함수: ", sum4);
+    </script>
+  </head>
+  <body></body>
+</html>

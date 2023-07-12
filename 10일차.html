@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+      }
+
+      .div1 {
+        background-color: red;
+      }
+
+      .div2 {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div1">1</div>
+    <div class="div2">2</div>
+    <div class="div1">3</div>
+    <div class="div2">4</div>
+    <div class="div1">5</div>
+
+    <script>
+      //   //표준객체: 자바스크립트에 기본 내장되어있는 친구들 ex. String, Number, Array etc.
+      //   let date = new Date();
+      //   console.log(date.getTime());
+
+      //   console.log(Math.PI);
+      //   console.log(Math.E);
+      //   console.log(Math.SQRT2);
+
+      console.log(document);
+      console.log(document.querySelectorAll(".div2"));
+    </script>
+  </body>
+</html>
