@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    값1: <input type="text" id="value1" />
+    <br />
+    값2: <input type="text" id="value2" />
+    <br />
+    연산자: <input type="text" id="operator" />
+    <br />
+    결과: <input type="text" id="result" />
+    <br />
+    <button onclick="calculate()">계산하기</button>
+    <button onclick="reset()">초기화</button>
+
+    <script>
+      let inp1 = document.getElementById("value1");
+      let inp2 = document.getElementById("value2");
+      let operator = document.getElementById("operator");
+      let rslt = document.getElementById("result");
+
+      function calculate() {
+        let val1 = Number(inp1.value);
+        let val2 = Number(inp2.value);
+        let opr = operator.value;
+
+        if (opr === "*") {
+          rslt.value = val1 * val2;
+        } else if (opr === "/") {
+          result.value = val1 / val2;
+        } else if (opr === "+") {
+          result.value = val1 + val2;
+        } else if (opr === "-") {
+          result.value = val1 - val2;
+        }
+        //eval 함수라는게 있는데, 쓰지 않는게 좋음. 보안 취약
+
+        console.log(val1);
+        console.log(rslt);
+      }
+
+      function reset() {
+        inp1.value = null;
+        inp2.value = null;
+        operator.value = null;
+        rslt.value = null;
+      }
+    </script>
+  </body>
+</html>

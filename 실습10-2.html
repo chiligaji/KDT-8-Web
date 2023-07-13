@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    방명록입니다.
+    <br />
+    작성자 <input type="text" id="name" style="width: 200px; margin-left: 1%" />
+    <br />
+    내용 <input type="text" id="content" style="width: 80%; margin-left: 1%" />
+    <br />
+    <button onclick="submit()">작성</button>
+
+    <table border="1px" cellspacing="0" cellpadding="5px" width="fit-content">
+      <tr textAlign="center" id="headRow">
+        <th>번호</th>
+        <th>작성자</th>
+        <th>내용</th>
+        <th>작성일</th>
+      </tr>
+    </table>
+
+    <script>
+      let num = 0;
+      function submit() {
+        let name = document.getElementById("name").value;
+        let content = document.getElementById("content").value;
+        let standard = document.getElementsByTagName("tr");
+        let date = new Date();
+
+        let newr = document.createElement("tr");
+        standard[num].after(newr);
+
+        let col0 = document.createElement("td");
+        col0.innerText = num + 1;
+        newr.append(col0);
+
+        let col1 = document.createElement("td");
+        col1.innerText = name;
+        newr.append(col1);
+
+        let col2 = document.createElement("td");
+        col2.innerText = content;
+        newr.append(col2);
+
+        let col3 = document.createElement("td");
+        col3.innerText = date.getDate;
+        newr.append(col3);
+
+        num++;
+      }
+    </script>
+  </body>
+</html>
