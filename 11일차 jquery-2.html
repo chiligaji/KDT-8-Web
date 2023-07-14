@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      function append() {
+        //어제
+        let li = document.createElement("li");
+        li.innerText = "append 된 친구";
+        document.querySelector("ul").append(li);
+
+        //jquery는 요소생성은 안됨
+        let li2 = document.createElement("li");
+        $(li2).text("jquery Append된 친구");
+        $("ul").append(li2);
+      }
+
+      function prepend() {
+        //어제
+        let li = document.createElement("li");
+        li.innerText = "prepend 된 친구";
+        document.querySelector("ul").prepend(li);
+
+        //jquery는 요소생성은 안됨
+        let li2 = document.createElement("li");
+        $(li2).text("jquery prepend된 친구");
+        $("ul").prepend(li2);
+      }
+
+      function before() {
+        //기준요소의 앞에 추가한다
+        //어제
+        let li = document.createElement("li");
+        li.innerText = "before된 친구";
+        //document.querySelector("#li2").before(li);
+
+        //jquery
+        $("#li2").before(li);
+      }
+
+      function after() {
+        //기준요소의 뒤에 추가한다
+        //어제
+        let li = document.createElement("li");
+        li.innerText = "after된 친구";
+        //document.querySelector("#li2").after(li);
+
+        //jquery
+        $("#li2").after(li);
+      }
+
+      function removeElement() {
+        //remove(): 내가 선택한 요소를 삭제하는 친구
+        //document.querySelector("ul").remove();
+        $("ul").remove();
+      }
+
+      function emptyElement() {
+        //removeChild(): 내가 선택한 요소의 자식요소를 삭제하는 친구. 부모를 선택하고 삭제할 자식 하나를 보내야 함 (standard를 만듦)
+        let standard = document.querySelector("li");
+        // document.querySelector("ul").removeChild(standard);
+
+        //empty함수는 부모는 남겨두고 자식요소를 전부 삭제함
+        $("ul").empty();
+      }
+      function findParent() {
+        // parent(): 부모요소를 반환
+        console.log($(".child2").parent());
+      }
+
+      function findParents() {
+        // parents(): 조상요소를 모두 반환
+        console.log($(".child2").parents());
+      }
+
+      function findNext() {
+        console.log($(".child2").next());
+      }
+
+      function findPrev() {
+        console.log($(".child2").prev());
+      }
+
+      function findChildren() {
+        //children() : 부모요소를 선택했을 때 그 자식요소들을 반환
+        //childNodes랑 children 중 어떤거랑 동일할까? children
+        let standard = $(".parent").children();
+        console.log(standard);
+      }
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li>1</li>
+      <li id="li2">2</li>
+      <li id="li3">3</li>
+    </ul>
+
+    <button onclick="append()">append</button>
+    <button onclick="prepend()">prepend</button>
+    <button onclick="before()">before</button>
+    <button onclick="after()">after</button>
+    <button onclick="search()">search</button>
+    <button onclick="removeElement()">remove</button>
+    <button onclick="emptyElement()">emptyElement</button>
+
+    <hr />
+    <h5>요소탐색</h5>
+    <div class="ancestor">
+      <div class="parent">
+        <div class="child1">자식1</div>
+        <div class="child2">자식2</div>
+        <div class="child3">자식3</div>
+      </div>
+    </div>
+
+    <button onclick="findParent()">findParent</button>
+    <button onclick="findParents()">findParents</button>
+    <button onclick="findNext()">findNext</button>
+    <button onclick="findPrev()">findPrev</button>
+    <button onclick="findChildren()">findChildren</button>
+  </body>
+  <script>
+    console.log($(".parent").children());
+  </script>
+</html>
