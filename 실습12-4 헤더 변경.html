@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <style>
+      div.header {
+        width: 100vw;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: skyblue;
+        height: 100px;
+      }
+
+      div.mainIcon {
+        margin-left: 10%;
+      }
+
+      div.headerBody {
+        margin-left: 30%;
+        width: 200px;
+        display: flex;
+        justify-content: flex-start;
+      }
+      ul {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        justify-content: space-between;
+
+        padding: 0px;
+        margin-left: 0%;
+      }
+
+      @media screen and (max-width: 768px) {
+        div.header {
+          height: 60px;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        div.mainIcon {
+          margin: 0;
+        }
+        div.headerBody {
+          margin: 0;
+          border: 2px solid;
+          justify-content: right;
+        }
+        ul {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="mainIcon">
+        <span class="material-symbols-outlined"> pets </span>
+      </div>
+      <div class="headerBody">
+        <ul class="menu">
+          <li>메뉴1</li>
+          <li>메뉴2</li>
+          <li>메뉴3</li>
+          <li>메뉴4</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
