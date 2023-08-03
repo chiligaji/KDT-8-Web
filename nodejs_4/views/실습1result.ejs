@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      span {
+        color: blue;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <div><span><%= userInfo.name %></span>님 환영합니다!</div>
+    <div>
+      성별은
+      <span><%= userInfo.gender %></span>군요!!
+    </div>
+    <div>
+      생일은
+      <span
+        ><%= userInfo.birthYear %>년 <%= userInfo.birthMonth %>월 <%=
+        userInfo.birthDay %>일</span
+      >이군요!!
+    </div>
+    <div>
+      관심사는
+      <span><%= userInfo.interest %></span>이군요!!
+    </div>
+    <div>
+      좋아하는 숫자는
+      <span><%= userInfo.number %></span>이군요!!
+    
+    <div>
+      오늘 기분은 <% if(userInfo.feeling == 1){ %>
+      <span>매우 안좋군요ㅠㅠ</span>
+      <% } else if(userInfo.feeling == 2){ %>
+      <span>조금 안좋군요..</span>
+      <% } else if(userInfo.feeling == 3){ %>
+      <span>그럭저럭이군요</span>
+      <% } else if(userInfo.feeling == 4){ %>
+      <span>좋군요!</span>
+      <% } else if(userInfo.feeling == 5){ %>
+      <span>매우 좋군요~!!</span>
+      <% } %>
+    </div>
+    
+
+    <br />
+    <br />
+    <a href="/">홈으로 이동</a>
+  </body>
+</html>

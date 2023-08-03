@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const list = ["apple", "grape"];
+      //기존방식
+      console.log(list[0], list[1]);
+      //구조분해
+      [item1, item2, item3 = "peach"] = list;
+      console.log(item1, item3);
+      //교환
+      let x = 1,
+        y = 3;
+      [x, y] = [y, x];
+      console.log(x, y);
+
+      //객체
+      const Person = {
+        name: "martin",
+        age: 19,
+        gender: "M",
+        friends: ["Alex", "Kevin"],
+        hello: function () {
+          console.log("hello");
+        },
+        "j-1": "America",
+      };
+      console.log(Person.name);
+      console.log(Person["name"]);
+      //위 방식으로 접근하는 건 어떤식이냐면 애당초 키 값이 "j-1" 같은 특수문자가 들어간 이름일 시,Person.j-1 이런식으로 쓸 수가 없어서 저렇게 씀
+      console.log(Person["j-1"]);
+      Person.age = 29;
+      console.log(Person.age);
+      console.log(Person.friends[1]);
+      Person.hello();
+      //객체에 새로운 키와 밸류 추가도 가능
+      Person.city = "Seoul";
+      console.log(Person);
+
+      //const Persons = [{}, {}] 이런식으로 배열 안에 모든 객체를 넣을 수도 있음
+
+      //객체 구조 분해
+      const { name, city, gender, key1 = "Hi" } = Person;
+      console.log(name, city, gender, key1);
+    </script>
+  </body>
+</html>
