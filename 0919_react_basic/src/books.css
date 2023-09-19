@@ -1,0 +1,15 @@
+.container {
+  width: 700px;
+  height: 800px;
+  background-color: rgba(255, 208, 0, 0.288);
+  text-align: center;
+}
+
+.bestSeller {
+  color: orange;
+}
+
+.contents {
+  text-align: start;
+  margin-left: 100px;
+}
